@@ -13,3 +13,14 @@ docker pull image-name:version (to pull image from docker hub)
 docker image tag exist_image_name docker_hub_name/new_name ( eg: docker image tag nginx ahmedindian7/new_image)
 docker push docker_accout/image_name (to push image on account)
 docker login (username:ahmedindian7 -- Password : ****) (To login in Docker account)
+
+
+docker container commit --author "Ahmed" -m "this is test commit" a96117577754 ahmed_test_image
+docker image ls --format '{{.ID}} , {{.Repository}} - {{.Tag}} 
+docker image history image-name (To see image history)
+docker image rm image-name (to delete image)
+docker image rmi ubuntu:10.04 (to delete image)
+docker image inspect image-name | less  (To Inspect image)
+docker image prune (to delete all images)
+docker image save image-name:tag image-name.tar (to save docker image in tar)
+docker image load < image-name.tar (to load saved image in docker)
